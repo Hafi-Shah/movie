@@ -1,1 +1,98 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+
+/* Global variables for dark theme */
+:root {
+  --background-color: #f1f1f1; /* Dark background */
+  --primary-text-color: #5a5a5a; /* Light text for readability */
+  --secondary-text-color: #1f1f1f; /* Lighter text */
+  --button-background: #3a3a3a; /* Dark buttons */
+  --button-text-color: #ffffff; /* Light text on buttons */
+  --link-color: #1e90ff; /* Light blue for links */
+  --link-hover-color: #b547ff; /* Red for link hover */
+  --input-background: #2c2c2c; /* Dark input fields */
+  --input-text-color: #ffffff; /* Light text on inputs */
+}
+
+* {
+  transition: 0.4s all;
+}
+
+/* Global body and text settings */
+body {
+  background-color: var(--background-color) !important;
+  color: var(--primary-text-color) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li,
+div {
+  font-family: "Parkinsans", sans-serif !important;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: "Parkinsans", sans-serif !important;
+}
+
+/* Headings (h1 to h6) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-text-color) !important;
+}
+
+/* Paragraphs and general text */
+p,
+span,
+a,
+li {
+  color: var(--secondary-text-color) !important;
+}
+
+/* Links */
+a {
+  color: var(--link-color) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--link-hover-color) !important;
+}
+
+/* Button Styles */
+button {
+  background-color: var(--button-background) !important;
+  color: var(--button-text-color) !important;
+  border: 0;
+  padding: 10px 20px !important;
+  cursor: pointer !important;
+}
+
+button:hover {
+  background-color: var(--link-hover-color) !important;
+}
+
+/* Input Fields */
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.bg-brand {
+  background: var(--background-color);
+}
