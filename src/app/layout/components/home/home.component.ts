@@ -60,17 +60,13 @@ export class HomeComponent {
         )
         .subscribe({
           next: (res: any) => {
-            if (Array.isArray(res.Search)) {
-              this.movie_data = this.limitData(res.Search); // Limit the data using the new method
-              console.log(this.movie_data);
-              this.data_loaded = true;
-              this.search_text = '';
-            } else {
-              console.warn('Search is not an array:', res.Search);
-            }
+            this.movie_data = this.limitData(res.Search);
+            console.log(this.movie_data);
+            this.data_loaded = true;
+            this.search_text = '';
           },
           error: (err: any) => {
-            console.warn('data not retrieved:', err);
+            console.error('data not retrieved:', err);
           },
           complete: () => {
             console.log('successful');
